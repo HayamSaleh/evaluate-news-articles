@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sentiment Analyzer</title>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        SENTIMENT ANALYZER
+      </header>
+      <div class="container">
+        <p>Enter a URL of an article / a blog to discover its sentiment.</p>
+        <section>
+          <form id="form">
+            <label for="article-url">URL</label>
+            <input id="article-url" type="text" name="input" value="" placeholder="Enter Article URL here" />
+            <button
+              type="button"
+              class="btn-submit"
+              onclick="return Client.handleSubmit(event)" >
+              Submit
+            </button>
+          </form>
+        </section>
+
+        <section class="results">
+          <strong>Form Results:</strong>
+          <table>
+            <tr>
+              <th>Agreement</th>
+              <td id="agreement"></td>
+            </tr>
+            <tr>
+              <th>Subjectivity</th>
+              <td id="subjectivity"></td>
+            </tr>
+            <tr>
+              <th>Confidence</th>
+              <td id="confidence"></td>
+            </tr>
+            <tr>
+              <th>Irony</th>
+              <td id="irony"></td>
+            </tr>
+            <tr>
+              <th>Score Tag</th>
+              <td id="score_tag"></td>
+            </tr>
+          </table>
+        </section>
+      </div>
+      <footer>
+        :)
+      </footer>
+    </main>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+        })
+      }
+    </script>
+  </body>
+</html>

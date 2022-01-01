@@ -1,0 +1,30 @@
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+.container {
+  width: 70%;
+  margin: 40px auto;
+}
+
+.results strong {
+  font-size: 18px;
+}
+
+table {
+  width: 80%;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid rgb(143, 136, 136);
+}
+
+th {
+  width: 30%;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
