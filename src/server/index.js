@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
-app.post('/hayam', async (req, res) => {
+app.post('/article', async (req, res) => {
   const url = 'https://jamesclear.com/five-step-creative-process';
   const response =  await fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${API_KEY}&url=${url}&lang=en`)
   try {
