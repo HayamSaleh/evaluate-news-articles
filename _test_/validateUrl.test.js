@@ -1,4 +1,4 @@
-import {validateUrl} from '../src/client/js/validateUrl';
+import validateUrl from '../src/client/js/validateUrl';
 
 describe('Test If validateUrl exists' , () => {
   test('validateUrl must return true', () => {
