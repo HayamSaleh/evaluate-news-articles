@@ -7,7 +7,7 @@ export async function handleSubmit(event) {
   const isValidUrl = Client.validateUrl(articleUrl);
 
   if(isValidUrl){
-    await fetch('http://localhost:8081/hayam', {
+    await fetch('http://localhost:8081/article', {
       method: 'POST',
       body: JSON.stringify({articleUrl}),
     })
@@ -15,13 +15,12 @@ export async function handleSubmit(event) {
       await res.json()
     ))
     .then((res) => {
-      console.log(res);
       document.getElementById('agreement').innerHTML = res.agreement
       document.getElementById('subjectivity').innerHTML = res.subjectivity
-      document.getElementById('confidence').innerHTML = res.confidence
       document.getElementById('subjectivity').innerHTML = res.subjectivity
       document.getElementById('irony').innerHTML = res.irony
       document.getElementById('score_tag').innerHTML = res.score_tag
+      document.getElementById('confidence').innerHTML = res.confidence
     })
   } else {
     alert('Invalid URL, please Enter a valid one');
