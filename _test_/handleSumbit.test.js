@@ -1,4 +1,4 @@
-import {handleSubmit} from '../src/client/js/handleSubmit';
+import handleSubmit from '../src/client/js/handleSubmit';
 
 
 describe('Test If handleSubmit exists' , () => {

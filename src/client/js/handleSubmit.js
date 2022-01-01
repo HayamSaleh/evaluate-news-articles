@@ -1,6 +1,4 @@
-// import { JSON } from "body-parser"
-
-export async function handleSubmit(event) {
+async function handleSubmit(event) {
   event.preventDefault()
 
   const articleUrl = document.getElementById('article-url').value;
@@ -25,5 +23,6 @@ export async function handleSubmit(event) {
   } else {
     alert('Invalid URL, please Enter a valid one');
   }
-
 }
+
+module.exports = handleSubmit;

@@ -15,8 +15,7 @@ app.use(express.static('dist'))
 const API_KEY = process.env.API_KEY
 
 app.get('/', function (req, res) {
-  // res.sendFile('dist/index.html') //production
-  res.sendFile(path.resolve('src/client/views/index.html'))
+  res.sendFile(path.resolve("dist/index.html"));
 })
 
 app.post('/article', async (req, res) => {
